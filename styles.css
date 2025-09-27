@@ -2,6 +2,9 @@
     --grad1: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(0, 34, 255, 1) 100%);
     --grad2: linear-gradient(90deg,rgba(255, 157, 0, 1) 0%, rgba(178, 209, 0, 1) 50%, rgba(157, 255, 0, 1) 100%);
 }
+html {
+    scroll-behavior: smooth;
+}
 main {
     min-height: 80vh;
     display: flex;
@@ -31,7 +34,7 @@ p {
     text-align: center;
     font-size: 1.5em;
     margin: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 footer {
     background-color: #aaaaaa;
@@ -47,6 +50,29 @@ a {
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
     margin: 10px;
+    text-wrap: break-word;
+}
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    scale: 1.5;
+    background-color: #717171;
+    color: rgb(255, 255, 255);
+    border: rgb(73, 51, 200);
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    z-index: 99; /* Ensure it is above other content */
+    transition: all 0.7s ease-in-out;
+}
+#scroll-to-top:hover {
+    background-color: rgb(26, 178, 178);
+}
+html {
+    scroll-behavior: smooth;
 }
 img, video {
     border-radius: 12px;
@@ -70,10 +96,11 @@ button {
     border-radius: 12px;
     transition: all 0.5s ease;
     text-overflow: break-word;
-    width: 40vw;
-    height: 20vh;
-    max-width: 200px;
-    max-height: 150px;
+    width: max-content;
+    height: max-content;
+    max-width: 40vw;
+    /* AS A WARNING TO WHOEVER STUBLES UPON THIS CODE: DO NOT DELETE, CHANGE OR ALTER. I HAVE NO IDEA WHY THIS WORKS BUT WHEN ITS NOT THERE IT DOESENT. */
+    max-height: min(150px, max-content);
 }
 #arrow {
     transition: transform 0.5s;
@@ -124,6 +151,7 @@ div {
     justify-content: center;
     align-content: center;
     margin-bottom: 20px;
+    margin: auto;
 }
 .download-container {
     background-color: #8b91a2;
@@ -133,6 +161,7 @@ div {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
+    max-width: 96%;
 }
 #large-text {
     width: 90% !important;
