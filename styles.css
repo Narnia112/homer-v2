@@ -73,7 +73,7 @@ a {
 }
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 img, video {
     border-radius: 12px;
