@@ -1,240 +1,507 @@
+/* CSS Document */
 :root {
     --grad1: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(0, 34, 255, 1) 100%);
     --grad2: linear-gradient(90deg,rgba(255, 157, 0, 1) 0%, rgba(178, 209, 0, 1) 50%, rgba(157, 255, 0, 1) 100%);
+    --grad3: linear-gradient(to right, #b92b27, #1565c0);
 }
-main {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-h1{
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
-    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3em;
-    margin: 20px;
-}
-h2 {
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
-    font-size: 2em;
-    margin: 10px;
-    margin-bottom: 0px;
-}
-p {
-    font-family: 'Comfortaa', cursive;
-    text-align: center;
-    font-size: 1.5em;
-    margin: 10px;
-    margin-bottom: 10px;
-}
-footer {
-    background-color: #aaaaaa;
-    text-align: center;
-    width: 100%;
-}
-body {
-    margin: 0;
-}
-a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-    margin: 10px;
-    text-wrap: break-word;
-}
-#scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    scale: 1.5;
-    background-color: #717171;
-    color: rgb(255, 255, 255);
-    border: rgb(73, 51, 200);
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    display: block;
-    z-index: 99; /* Ensure it is above other content */
-    transition: all 0.7s ease-in-out;
-}
-#scroll-to-top:hover {
-    background-color: rgb(26, 178, 178);
-}
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-img, video {
-    border-radius: 12px;
-    width: 25vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
-}
-button {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: all 0.5s ease;
-    text-overflow: break-word;
-    width: max-content;
-    height: max-content;
-    max-width: 40vw;
-    /* AS A WARNING TO WHOEVER STUBLES UPON THIS CODE: DO NOT DELETE, CHANGE OR ALTER. I HAVE NO IDEA WHY THIS WORKS BUT WHEN ITS NOT THERE IT DOESENT. */
-    max-height: min(150px, max-content);
-}
-#arrow {
-    transition: transform 0.5s;
-    display: inline-block;
-    margin-left: 10px;
-    transform: rotateZ(90deg);
-}
-#odysseia {
-    background: var(--grad1);
-}
-#iliada {
-    background: var(--grad2);
-}
-#odysseia:hover {
-    scale: 1.1;
-}
-#iliada:hover {
-    scale: 1.1;
-}
-#odysseia:hover #arrow {
-    transform: translateX(30px);
-}
-#iliada:hover #arrow {
-    transform: translateX(30px);
-}
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.grid{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-rows: 1fr;
-    gap: 10px;
-    padding: 0px;
-    justify-items: center;
-    margin-bottom: 10px;
-}
-.content-container {
-    background-color: rgb(196, 196, 196);
-    border-radius: 12px;
-    display: inline-block;
-    width: 30%;
-    min-width: 300px;
-    position: relative;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 20px;
-    margin: auto;
-}
-.download-container {
-    background-color: #8b91a2;
-    border-radius: 12px;
-    margin: auto;
-    width: max-content;
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-width: 96%;
-}
-#large-text {
-    width: 90% !important;
-}
-#long-text {
-    margin-bottom: 10px;
-    color: black;
-    font-size: normal;
-}
-/*.back-button {
-    display: inline-block;
-    padding: 10px 22px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    border: 2px solid #333;
-    border-radius: 8px;
-    background: transparent;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.25s ease;
-}
+/* Light Mode */
+@media only screen and (prefers-color-scheme: light) {
+    main {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    h1{
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3em;
+        margin: 20px;
+    }
+    h2 {
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 2em;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+    p {
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 10px;
+        margin-bottom: 10px;
+    }
+    footer {
+        background-color: #aaaaaa;
+        text-align: center;
+        width: 100%;
+    }
+    body {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        margin: 10px;
+        text-wrap: break-word;
+    }
+    #scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        scale: 1.5;
+        background-color: #717171;
+        color: rgb(255, 255, 255);
+        border: rgb(73, 51, 200);
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+        display: block;
+        z-index: 99; /* Ensure it is above other content */
+        transition: all 0.7s ease-in-out;
+    }
+    #scroll-to-top:hover {
+        background-color: rgb(26, 178, 178);
+    }
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: #fff;
+    }
+    img, video {
+        border-radius: 12px;
+        width: 25vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+        text-overflow: break-word;
+        width: max-content;
+        height: max-content;
+        max-width: 40vw;
+        /* AS A WARNING TO WHOEVER STUMBLES UPON THIS CODE: DO NOT DELETE, CHANGE OR ALTER. I HAVE NO IDEA WHY THIS WORKS BUT WHEN ITS NOT THERE IT DOESENT. */
+        max-height: min(150px, max-content);
+    }
+    #arrow {
+        transition: transform 0.5s;
+        display: inline-block;
+        margin-left: 10px;
+        transform: rotateZ(90deg);
+    }
+    #odysseia {
+        background: var(--grad1);
+    }
+    #iliada {
+        background: var(--grad2);
+    }
+    #changes {
+        background: var(--grad3);
+    }
+    #odysseia:hover {
+        scale: 1.1;
+    }
+    #iliada:hover {
+        scale: 1.1;
+    }
+    #changes:hover {
+        scale: 1.1;
+    }
+    #odysseia:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    #iliada:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    #changes:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: 1fr;
+        gap: 10px;
+        padding: 0px;
+        justify-items: center;
+        margin-bottom: 10px;
+    }
+    .content-container {
+        background-color: rgb(196, 196, 196);
+        border-radius: 12px;
+        display: inline-block;
+        width: 30%;
+        min-width: 300px;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        margin: auto;
+    }
+    .download-container {
+        background-color: #8b91a2;
+        border-radius: 12px;
+        margin: auto;
+        width: max-content;
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 96%;
+    }
+    #large-text {
+        width: 90% !important;
+    }
+    #long-text {
+        margin-bottom: 10px;
+        color: black;
+        font-size: normal;
+    }
+    /*.back-button {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        border: 2px solid #333;
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
 
-.back-button:hover {
-    color: #fff;
-    background: #333;
-}
+    .back-button:hover {
+        color: #fff;
+        background: #333;
+    }
 
-.back-button:active {
-    transform: scale(0.97);
-}*/
-.back-button {
-    position: fixed;     /* sticks to screen */
-    top: 20px;           /* distance from top */
-    left: 20px; 
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff;
-    background: linear-gradient(135deg, #4f46e5, #3b82f6);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    z-index: 50;
-}
+    .back-button:active {
+        transform: scale(0.97);
+    }*/
+    .back-button {
+        position: fixed;     /* sticks to screen */
+        top: 20px;           /* distance from top */
+        left: 20px; 
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        background: linear-gradient(135deg, #4f46e5, #3b82f6);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        z-index: 50;
+    }
 
-.back-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: skewX(-20deg);
-    transition: left 0.4s ease;
-}
+    .back-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: skewX(-20deg);
+        transition: left 0.4s ease;
+    }
 
-.back-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(92, 81, 202, 0.7);
-}
+    .back-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(92, 81, 202, 0.7);
+    }
 
-.back-button:hover::before {
-    left: 100%;
-}
+    .back-button:hover::before {
+        left: 100%;
+    }
 
-.back-button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .back-button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #header{
+        margin-top: 16vh;
+    }
 }
-#header{
-    margin-top: 16vh;
+/* Dark Mode */
+@media only screen and (prefers-color-scheme: dark) {
+    main {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    h1{
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3em;
+        margin: 20px;
+    }
+    h2 {
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 2em;
+        margin: 10px;
+        
+        color: rgb(255, 255, 255);
+        margin-bottom: 0px;
+    }
+    p {
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 10px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+    }
+    footer {
+        background-color: #aaaaaa;
+        text-align: center;
+        width: 100%;
+    }
+    body {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        margin: 10px;
+        text-wrap: break-word;
+    }
+    #scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        scale: 1.5;
+        background-color: #717171;
+        color: rgb(255, 255, 255);
+        border: rgb(73, 51, 200);
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+        display: block;
+        z-index: 99; /* Ensure it is above other content */
+        transition: all 0.7s ease-in-out;
+    }
+    #scroll-to-top:hover {
+        background-color: rgb(26, 178, 178);
+    }
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: #3a3a3a;
+    }
+    img, video {
+        border-radius: 12px;
+        width: 25vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+        text-overflow: break-word;
+        width: max-content;
+        height: max-content;
+        max-width: 40vw;
+        /* AS A WARNING TO WHOEVER STUMBLES UPON THIS CODE: DO NOT DELETE, CHANGE OR ALTER. I HAVE NO IDEA WHY THIS WORKS BUT WHEN ITS NOT THERE IT DOESENT. */
+        max-height: min(150px, max-content);
+    }
+    #arrow {
+        transition: transform 0.5s;
+        display: inline-block;
+        margin-left: 10px;
+        transform: rotateZ(90deg);
+    }
+    #odysseia {
+        background: var(--grad1);
+    }
+    #iliada {
+        background: var(--grad2);
+    }
+    #changes {
+        background: var(--grad3);
+    }
+    #odysseia:hover {
+        scale: 1.1;
+    }
+    #iliada:hover {
+        scale: 1.1;
+    }
+    #changes:hover {
+        scale: 1.1;
+    }
+    #odysseia:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    #iliada:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    #changes:hover #arrow {
+        transform: rotateZ(0deg);
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: 1fr;
+        gap: 10px;
+        padding: 0px;
+        justify-items: center;
+        margin-bottom: 10px;
+    }
+    .content-container {
+        background-color: rgb(100, 100, 100);
+        border-radius: 12px;
+        display: inline-block;
+        width: 30%;
+        min-width: 300px;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        margin: auto;
+    }
+    .download-container {
+        background-color: #8b91a2;
+        border-radius: 12px;
+        margin: auto;
+        width: max-content;
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 96%;
+    }
+    #large-text {
+        width: 90% !important;
+    }
+    #long-text {
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        font-size: normal;
+    }
+    /*.back-button {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        border: 2px solid #333;
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+
+    .back-button:hover {
+        color: #fff;
+        background: #333;
+    }
+
+    .back-button:active {
+        transform: scale(0.97);
+    }*/
+    .back-button {
+        position: fixed;     /* sticks to screen */
+        top: 20px;           /* distance from top */
+        left: 20px; 
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        background: linear-gradient(135deg, #4f46e5, #3b82f6);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        z-index: 50;
+    }
+
+    .back-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: skewX(-20deg);
+        transition: left 0.4s ease;
+    }
+
+    .back-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(92, 81, 202, 0.7);
+    }
+
+    .back-button:hover::before {
+        left: 100%;
+    }
+
+    .back-button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #header{
+        margin-top: 16vh;
+    }
 }

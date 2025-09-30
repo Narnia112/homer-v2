@@ -4,3 +4,6 @@ function goToIliad() {
 function goToOdyssey() {
     window.location.href = "odyssey.html";
 }
+function goToChanges() {
+    window.location.href = "changes.html";
+}
