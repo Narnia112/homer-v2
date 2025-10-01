@@ -1,4 +1,5 @@
 /* CSS Document */
+/* Root Variables */
 :root {
     --grad1: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(0, 34, 255, 1) 100%);
     --grad2: linear-gradient(90deg,rgba(255, 157, 0, 1) 0%, rgba(178, 209, 0, 1) 50%, rgba(157, 255, 0, 1) 100%);
@@ -36,6 +37,11 @@
         font-size: 1.5em;
         margin: 10px;
         margin-bottom: 10px;
+    }
+    #button-text {
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 0;
     }
     footer {
         background-color: #aaaaaa;
@@ -89,17 +95,20 @@
     button {
         border: none;
         color: white;
-        padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
         cursor: pointer;
         border-radius: 12px;
         transition: all 0.5s ease;
         text-overflow: break-word;
-        width: max-content;
+        width: calc(max-content + 20px);
         height: max-content;
         max-width: 40vw;
         /* AS A WARNING TO WHOEVER STUMBLES UPON THIS CODE: DO NOT DELETE, CHANGE OR ALTER. I HAVE NO IDEA WHY THIS WORKS BUT WHEN ITS NOT THERE IT DOESENT. */
@@ -289,6 +298,11 @@
         color: rgb(255, 255, 255);
         margin-bottom: 10px;
     }
+    #button-text {
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 0;
+    }
     footer {
         background-color: #aaaaaa;
         text-align: center;
@@ -341,16 +355,20 @@
     button {
         border: none;
         color: white;
-        padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
         cursor: pointer;
         border-radius: 12px;
         transition: all 0.5s ease;
         text-overflow: break-word;
+        width: calc(max-content + 20px);
         width: max-content;
         height: max-content;
         max-width: 40vw;
